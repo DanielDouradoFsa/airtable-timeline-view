@@ -1,0 +1,75 @@
+/* Base reset and body styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #f8fafc;
+}
+
+/* Main timeline container */
+.timeline-container {
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  font-size: 14px;
+  overflow-x: auto;
+}
+
+/* Timeline header bar with sticky behavior */
+.timeline-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Day cells inside the timeline header */
+.timeline-header .timeline-days>div {
+  border-left: 1px solid #e5e7eb;
+}
+
+/* Timeline lane row */
+.timeline-lane {
+  height: 40px;
+  display: flex;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+/* Content grid for timeline items (aligned with header) */
+.lane-content {
+  display: grid;
+  position: relative;
+  flex: 1;
+}
+
+/* Timeline item block */
+.timeline-item {
+  box-sizing: border-box;
+  height: 30px;
+  background-color: #4f46e5;
+  color: white;
+  border-radius: 4px;
+  padding: 2px 6px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0;
+  border-left: 1px solid #ffffff;
+  /* visually marks the start of the item */
+  cursor: pointer;
+}
+
+/* Inline editable input inside a timeline item */
+.timeline-item input {
+  all: unset;
+  background: white;
+  color: #111827;
+  padding: 2px 4px;
+  border-radius: 4px;
+  border: 1px solid #d1d5db;
+  width: 100%;
+  font-size: 13px;
+}
